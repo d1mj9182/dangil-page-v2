@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>인터넷성지 고객 상담신청</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f7fc;
+      padding: 30px;
+    }
+    .form-wrapper {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #444;
+    }
+    input[type="text"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      appearance: none;
+    }
+    .checkbox-group {
+      margin-top: 25px;
+      margin-bottom: 20px;
+    }
+    .checkbox-group label {
+      font-weight: normal;
+    }
+    details {
+      background: #f8f9fa;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button {
+      width: 100%;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #43a047;
+    }
+    .top-banner {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 배너 이미지 -->
+  <img src="https://raw.githubusercontent.com/d1mj9182/dangil-page/main/스크린샷%202025-05-22%20083649.png" alt="상단 배너" class="top-banner" />
+
+  <div class="form-wrapper">
+    <h2>📞 인터넷성지 당일민족 상담신청</h2>
+    <form method="POST" action="https://script.google.com/macros/s/PASTE_YOUR_WEBAPP_URL/exec">
+      <div class="form-group">
+        <label for="name">성함</label>
+        <input type="text" id="name" name="성함" placeholder="이름을 입력하세요" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" name="연락처" placeholder="010-0000-0000" required>
+      </div>
+      <div class="form-group">
+        <label for="telecom">희망 통신사</label>
+        <select id="telecom" name="희망 통신사" required>
+          <option value="">-- 선택하세요 --</option>
+          <option value="SK">SK</option>
+          <option value="KT">KT</option>
+          <option value="LG">LG</option>
+          <option value="LG헬로비전">LG헬로비전</option>
+          <option value="KT스카이라이프">KT스카이라이프</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="product">신청 상품</label>
+        <select id="product" name="신청 상품" required>
+          <option value="">-- 선택하세요 --</option>
+          <option value="인터넷">인터넷</option>
+          <option value="인터넷+TV">인터넷 + TV</option>
+          <option value="인터넷+TV+집전화">인터넷 + TV + 집전화</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="addon">부가적인 상품</label>
+        <select id="addon" name="부가적인 상품">
+          <option value="">-- 선택하세요 --</option>
+          <option value="유심">유심</option>
+          <option value="정수기">정수기</option>
+          <option value="CCTV">CCTV</option>
+          <option value="유심+정수기">유심 + 정수기</option>
+        </select>
+      </div>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="agreeAll"> 전체 동의 (약관/수집/이용/3자제공)</label><br>
+        <label><input type="checkbox" class="agreement" required> 이용약관 동의 [보기]</label>
+        <details><summary>이용약관 보기</summary>이 사이트는 상담을 목적으로 운영되며, 이용자는 본 서비스 이용 중 생성되는 정보를 활용하여 설치 및 문의 목적에 동의합니다.</details>
+        <label><input type="checkbox" class="agreement" required> 개인정보 수집·이용 동의 [보기]</label>
+        <details><summary>개인정보 수집·이용 동의</summary>수집항목: 이름, 연락처, 희망 통신사 등<br>수집목적: 상담 제공 및 상품 안내<br>보유기간: 3개월</details>
+        <label><input type="checkbox" class="agreement"> 광고성 정보 수신 동의 [보기]</label>
+        <details><summary>광고성 정보 수신 동의</summary>이메일, 문자, 전화 등을 통해 프로모션 및 이벤트 정보 제공</details>
+        <label><input type="checkbox" class="agreement" required> 개인정보 제3자 제공 동의 [보기]</label>
+        <details><summary>개인정보 제3자 제공 동의</summary>제공받는 자: 제휴 통신사<br>목적: 가입 상담 및 혜택 제공<br>항목: 이름, 연락처, 신청 정보</details>
+      </div>
+
+      <button type="submit">문의하기</button>
+    </form>
+  </div>
+
+  <script>
+    const agreeAll = document.getElementById('agreeAll');
+    const checkboxes = document.querySelectorAll('.agreement');
+    agreeAll.addEventListener('change', function() {
+      checkboxes.forEach(cb => cb.checked = this.checked);
+    });
+  </script>
+</body>
+</html>
