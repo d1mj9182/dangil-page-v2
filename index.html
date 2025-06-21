@@ -18,6 +18,11 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+    .banner {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
     h2 {
       text-align: center;
       margin-bottom: 25px;
@@ -44,7 +49,6 @@
       appearance: none;
     }
     .checkbox-group {
-      margin-top: 25px;
       margin-bottom: 20px;
     }
     .checkbox-group label {
@@ -74,20 +78,14 @@
     button:hover {
       background: #43a047;
     }
-    .top-banner {
-      max-width: 800px;
-      margin: 0 auto 30px;
-      display: block;
-      width: 100%;
-    }
   </style>
 </head>
 <body>
-
-  <!-- 상단 배너 이미지 -->
-  <img src="https://raw.githubusercontent.com/d1mj9182/dangil-page/main/스크린샷%202025-05-22%20083649.png" alt="상단 배너" class="top-banner" />
-
   <div class="form-wrapper">
+    
+    <!-- 🟨 상단 배너 이미지 -->
+    <img src="banner.png" alt="당일민족 배너" class="banner" />
+
     <h2>📞 인터넷성지 당일민족 상담신청</h2>
     <form method="POST" action="https://script.google.com/macros/s/PASTE_YOUR_WEBAPP_URL/exec">
       <div class="form-group">
@@ -129,6 +127,7 @@
         </select>
       </div>
 
+      <!-- 🟩 약관 동의 영역 -->
       <div class="checkbox-group">
         <label><input type="checkbox" id="agreeAll"> 전체 동의 (약관/수집/이용/3자제공)</label><br>
         <label><input type="checkbox" class="agreement" required> 이용약관 동의 [보기]</label>
@@ -148,6 +147,7 @@
   <script>
     const agreeAll = document.getElementById('agreeAll');
     const checkboxes = document.querySelectorAll('.agreement');
+
     agreeAll.addEventListener('change', function() {
       checkboxes.forEach(cb => cb.checked = this.checked);
     });
