@@ -18,7 +18,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .banner {
+    .form-wrapper img {
       width: 100%;
       border-radius: 12px;
       margin-bottom: 20px;
@@ -82,19 +82,16 @@
 </head>
 <body>
   <div class="form-wrapper">
-    
-    <!-- 🟨 상단 배너 이미지 -->
-    <img src="banner.png" alt="당일민족 배너" class="banner" />
-
+    <img src="banner.png" alt="배너 이미지" />
     <h2>📞 인터넷성지 당일민족 상담신청</h2>
-    <form method="POST" action="https://script.google.com/macros/s/PASTE_YOUR_WEBAPP_URL/exec">
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbwNFDex4OFQ7hyZHGlzIkkamEqbsTYxce6KhGU0KFlSWtYNZgKW3OIRabpdGaiuVPPo/exec">
       <div class="form-group">
         <label for="name">성함</label>
-        <input type="text" id="name" name="성함" placeholder="이름을 입력하세요" required>
+        <input type="text" id="name" name="성함" placeholder="이름을 입력하세요" required />
       </div>
       <div class="form-group">
         <label for="phone">연락처</label>
-        <input type="tel" id="phone" name="연락처" placeholder="010-0000-0000" required>
+        <input type="tel" id="phone" name="연락처" placeholder="010-0000-0000" required />
       </div>
       <div class="form-group">
         <label for="telecom">희망 통신사</label>
@@ -127,17 +124,16 @@
         </select>
       </div>
 
-      <!-- 🟩 약관 동의 영역 -->
       <div class="checkbox-group">
-        <label><input type="checkbox" id="agreeAll"> 전체 동의 (약관/수집/이용/3자제공)</label><br>
-        <label><input type="checkbox" class="agreement" required> 이용약관 동의 [보기]</label>
+        <label><input type="checkbox" id="agreeAll" /> 전체 동의 (약관/수집/이용/3자제공)</label><br />
+        <label><input type="checkbox" class="agreement" required /> 이용약관 동의 [보기]</label>
         <details><summary>이용약관 보기</summary>이 사이트는 상담을 목적으로 운영되며, 이용자는 본 서비스 이용 중 생성되는 정보를 활용하여 설치 및 문의 목적에 동의합니다.</details>
-        <label><input type="checkbox" class="agreement" required> 개인정보 수집·이용 동의 [보기]</label>
-        <details><summary>개인정보 수집·이용 동의</summary>수집항목: 이름, 연락처, 희망 통신사 등<br>수집목적: 상담 제공 및 상품 안내<br>보유기간: 3개월</details>
-        <label><input type="checkbox" class="agreement"> 광고성 정보 수신 동의 [보기]</label>
+        <label><input type="checkbox" class="agreement" required /> 개인정보 수집·이용 동의 [보기]</label>
+        <details><summary>개인정보 수집·이용 동의</summary>수집항목: 이름, 연락처, 희망 통신사 등<br />수집목적: 상담 제공 및 상품 안내<br />보유기간: 3개월</details>
+        <label><input type="checkbox" class="agreement" /> 광고성 정보 수신 동의 [보기]</label>
         <details><summary>광고성 정보 수신 동의</summary>이메일, 문자, 전화 등을 통해 프로모션 및 이벤트 정보 제공</details>
-        <label><input type="checkbox" class="agreement" required> 개인정보 제3자 제공 동의 [보기]</label>
-        <details><summary>개인정보 제3자 제공 동의</summary>제공받는 자: 제휴 통신사<br>목적: 가입 상담 및 혜택 제공<br>항목: 이름, 연락처, 신청 정보</details>
+        <label><input type="checkbox" class="agreement" required /> 개인정보 제3자 제공 동의 [보기]</label>
+        <details><summary>개인정보 제3자 제공 동의</summary>제공받는 자: 제휴 통신사<br />목적: 가입 상담 및 혜택 제공<br />항목: 이름, 연락처, 신청 정보</details>
       </div>
 
       <button type="submit">문의하기</button>
@@ -147,8 +143,7 @@
   <script>
     const agreeAll = document.getElementById('agreeAll');
     const checkboxes = document.querySelectorAll('.agreement');
-
-    agreeAll.addEventListener('change', function() {
+    agreeAll.addEventListener('change', function () {
       checkboxes.forEach(cb => cb.checked = this.checked);
     });
   </script>
